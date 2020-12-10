@@ -2,11 +2,21 @@ turn = 1;
 gameOver = false;
 player1 = 0;
 player2 = 0;
-
+count = 0;
+tie = 0;
 $( document ).ready(function() {
 
     $('td').click(function()
     {
+
+        if(count === 9)
+        {
+            alert("Game Tied !!");
+            tie++;
+            $('.tie').text(tie);
+            reset();
+            return;
+        }
         if(gameOver)
         {
             return;
@@ -17,6 +27,7 @@ $( document ).ready(function() {
             $(this).text('X');
             $(this).addClass('X');
             turn = 2;
+            count++;
             checkAll();
 
         }
@@ -26,6 +37,7 @@ $( document ).ready(function() {
             $(this).text('O');
             $(this).addClass('O');
             turn = 1;
+            count++;
             checkAll();
         }
 
@@ -63,8 +75,9 @@ function reset()
     $(".r").text('');
     $('.r').removeClass('X')
     $('.r').removeClass('O')
-    $('.r').css("background-color", "gray"); 
+    $('.r').css("background-color", "#387780"); 
     turn=1;
+    count=0;
     gameOver=false;
 }
 
