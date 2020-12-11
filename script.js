@@ -4,18 +4,24 @@ player1 = 0;
 player2 = 0;
 count = 0;
 tie = 0;
+flag = false;
 $( document ).ready(function() {
 
     $('td').click(function()
     {
-
-        if(count === 9)
+        console.log(count)
+        if(count === 7)
         {
-            alert("Game Tied !!");
-            tie++;
-            $('.tie').text(tie);
-            reset();
-            return;
+         flag=true;
+        }
+        else if(flag==true)
+        {
+            if(checkAll==false)
+            {}
+            else{
+                Tie();
+            }
+
         }
         if(gameOver)
         {
@@ -23,6 +29,7 @@ $( document ).ready(function() {
         }
         if(turn===1 && !($(this).hasClass('O') || $(this).hasClass('X')))
         {
+            
             //console.log('inside X')
             $(this).text('X');
             $(this).addClass('X');
@@ -39,9 +46,7 @@ $( document ).ready(function() {
             turn = 1;
             count++;
             checkAll();
-        }
-
-       
+        }       
         
     })
   
@@ -50,8 +55,18 @@ $( document ).ready(function() {
 });
 
 
+function Tie()
+{
+    alert("Game Tied !!");
+    tie++;
+    $('.tie').text(tie);
+    reset();
+    return;
+}
+
 function checkAll()
 {
+   
     if(check('X'))
             {
                 gameOver=true
@@ -59,12 +74,16 @@ function checkAll()
                 player1 = player1+1;
                 window.setTimeout( reset(), 10000000 );
             }
-            else if(check('O'))
+    else if(check('O'))
             {
                 gameOver=true
                 alert("Player 2 wins")        
                 player2 = player2+1;
                 window.setTimeout( reset(), 10000000 );
+            }
+            else
+            {
+                return false;
             }
             $('.player1').text(player1);
             $('.player2').text(player2);
