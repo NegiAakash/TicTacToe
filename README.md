@@ -8,7 +8,11 @@ Project Status
 This project is currently in development. 2 players can play together but player vs computer is in progress.Needs internet connection for jquery as to minimise size 
 of project I used jquery CDN.
 
-![TicTacToe](https://github.com/NegiAakash/TicTacToe/raw/master/Screenshots/SS1.PNG)
+![Screenshot1](https://github.com/NegiAakash/TicTacToe/raw/master/Screenshots/SS1.PNG)
+
+![Screenshot2](https://github.com/NegiAakash/TicTacToe/raw/master/Screenshots/SS2.PNG)
+
+![Screenshot3](https://github.com/NegiAakash/TicTacToe/raw/master/Screenshots/ss3.PNG)
 
 Installation and Setup Instructions
 
