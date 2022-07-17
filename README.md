@@ -1,7 +1,7 @@
 # Hi, I'm Aakash! 👋
 
-#### I am a Senior Software Engineer at John dheere.
-## Project Name & Pitch
+#### I am a Senior Software Engineer at John deere.
+## Project Name
 ## TIC TAC TOE
 
 A simple tic tac toe game build using HTML, CSS, JQuery. Needs 2 players to play player vs computer is not yet implemented.
